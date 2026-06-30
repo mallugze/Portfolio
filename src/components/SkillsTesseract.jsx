@@ -1,7 +1,7 @@
 import React, { useRef, useMemo, useEffect, useState, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Text, Line } from '@react-three/drei';
-import { EffectComposer, Bloom } from '@react-three/postprocessing';
+
 import * as THREE from 'three';
 
 const SKILLS_NODES = [
@@ -182,15 +182,6 @@ function TesseractScene({ parentContainer }) {
       {/* Falling stars */}
       <StarParticles />
 
-      {/* Emissive postprocessing bloom glow */}
-      <EffectComposer>
-        <Bloom 
-          intensity={1.3} 
-          luminanceThreshold={0.12} 
-          luminanceSmoothing={0.8} 
-          height={300} 
-        />
-      </EffectComposer>
     </group>
   );
 }
