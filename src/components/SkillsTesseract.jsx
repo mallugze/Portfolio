@@ -59,7 +59,6 @@ function SkillNode({ name, color, x, y, z }) {
         position={[x, y + 0.75, z]}
         fontSize={0.34}
         color="#ffffff"
-        font="https://fonts.gstatic.com/s/outfit/v11/0oWqY3F1Ad5AdfKG4jQ.woff" // Outfit font link
         anchorX="center"
         anchorY="middle"
       >
