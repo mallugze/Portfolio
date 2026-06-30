@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import HollowPurpleIntro from './components/HollowPurpleIntro';
 import Navbar from './components/Navbar';
@@ -10,10 +10,14 @@ import Contact from './components/Contact';
 export default function App() {
   const [introFinished, setIntroFinished] = useState(false);
 
+  const handleIntroComplete = useCallback(() => {
+    setIntroFinished(true);
+  }, []);
+
   return (
     <>
-      {/* Intro sequence Overlay */}
-      <HollowPurpleIntro onComplete={() => setIntroFinished(true)} />
+      {/* Intro sequence Overlay - Unmounted completely when finished */}
+      {!introFinished && <HollowPurpleIntro onComplete={handleIntroComplete} />}
 
       {/* Main Content (only mounted and animated in after intro finishes) */}
       <AnimatePresence>
