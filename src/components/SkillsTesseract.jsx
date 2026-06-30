@@ -1,6 +1,6 @@
 import React, { useRef, useMemo, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Text, Line, Html } from '@react-three/drei';
+import { Line, Html } from '@react-three/drei';
 import * as THREE from 'three';
 
 const ALL_SKILLS = [
@@ -77,17 +77,8 @@ const ALL_SKILLS = [
   { name: 'Render', color: '#4338ca' }
 ];
 
-// Staggered Holographic Skill Node with Official Logo
+// Staggered Holographic Skill Node showing actual Logo as the primary disc
 function SkillNode({ name, icon, color, x, y, z }) {
-  const meshRef = useRef();
-
-  useFrame((state, delta) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x += 0.35 * delta;
-      meshRef.current.rotation.y += 0.45 * delta;
-    }
-  });
-
   const wallX = x > 0 ? 5 : -5;
   
   // Official Devicon CDN URL
@@ -106,51 +97,62 @@ function SkillNode({ name, icon, color, x, y, z }) {
         opacity={0.12}
       />
 
-      {/* Rotating 3D node */}
-      <mesh ref={meshRef} position={[x, y, z]}>
-        <octahedronGeometry args={[0.22]} />
-        <meshStandardMaterial
-          color={color}
-          emissive={color}
-          emissiveIntensity={1.8}
-          roughness={0.2}
-          metalness={0.8}
-        />
-      </mesh>
-
-      {/* Glassmorphic HTML overlay badge */}
+      {/* Unified glassmorphic logo disk and name label */}
       <Html
-        position={[x, y + 0.45, z]}
+        position={[x, y, z]}
         center
         distanceFactor={7}
         className="pointer-events-none select-none"
       >
-        <div 
-          className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono font-bold text-white border whitespace-nowrap shadow-md select-none transition-all duration-300"
-          style={{ 
-            background: 'rgba(10, 10, 10, 0.85)',
-            borderColor: `${color}35`,
-            boxShadow: `0 0 10px ${color}15`
-          }}
-        >
-          {logoUrl ? (
-            <img 
-              src={logoUrl} 
-              className="w-3.5 h-3.5 object-contain" 
-              alt="" 
-              onError={(e) => { e.target.style.display = 'none'; }} 
-            />
-          ) : (
-            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: color }} />
-          )}
-          <span>{name}</span>
+        <div className="flex flex-col items-center gap-2 select-none">
+          {/* Logo Disc itself replaces the 3D cube */}
+          <div 
+            className="w-12 h-12 rounded-full flex items-center justify-center border shadow-lg transition-transform duration-300"
+            style={{ 
+              background: 'rgba(10, 10, 10, 0.9)',
+              borderColor: `${color}80`,
+              boxShadow: `0 0 15px ${color}30`
+            }}
+          >
+            {logoUrl ? (
+              <img 
+                src={logoUrl} 
+                className="w-7 h-7 object-contain" 
+                alt={name} 
+                onError={(e) => { 
+                  // Fallback to pulsing brand dot if SVG is missing
+                  e.target.style.display = 'none'; 
+                  const parent = e.target.parentElement;
+                  if (parent) {
+                    const fallbackDot = document.createElement('div');
+                    fallbackDot.className = 'w-3 h-3 rounded-full animate-pulse';
+                    fallbackDot.style.backgroundColor = color;
+                    parent.appendChild(fallbackDot);
+                  }
+                }} 
+              />
+            ) : (
+              <div className="w-3 h-3 rounded-full animate-pulse" style={{ backgroundColor: color }} />
+            )}
+          </div>
+          
+          {/* Skill Title under the logo */}
+          <span 
+            className="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold text-white border whitespace-nowrap"
+            style={{ 
+              background: 'rgba(10, 10, 10, 0.8)',
+              borderColor: `${color}25`
+            }}
+          >
+            {name}
+          </span>
         </div>
       </Html>
     </group>
   );
 }
 
-// Gargantua-style 3D Black Hole at the bottom of the Z-axis
+// Gargantua-style 3D Black Hole - Bypasses depth fog to loom in the center from the start
 function BlackHole() {
   const diskRef = useRef();
   
@@ -162,13 +164,13 @@ function BlackHole() {
 
   return (
     <group position={[0, 0, -140]}>
-      {/* Event Horizon (Pure Black Light-Absorbing Sphere) */}
+      {/* Event Horizon (Pure Black Sphere - fog=false to remain visible) */}
       <mesh>
-        <sphereGeometry args={[2.4, 32, 32]} />
-        <meshBasicMaterial color="#000000" />
+        <sphereGeometry args={[2.5, 32, 32]} />
+        <meshBasicMaterial color="#000000" fog={false} />
       </mesh>
 
-      {/* Tilted Accretion Disk (Swirling glowing ring) */}
+      {/* Accretion Disk (glowing ring - fog=false to remain visible) */}
       <mesh ref={diskRef} rotation={[Math.PI / 2.3, 0, 0]}>
         <torusGeometry args={[3.2, 0.38, 8, 64]} />
         <meshStandardMaterial
@@ -177,10 +179,11 @@ function BlackHole() {
           emissiveIntensity={2.8}
           transparent
           opacity={0.85}
+          fog={false}
         />
       </mesh>
       
-      {/* Outer Corona glow */}
+      {/* Corona glow (fog=false to remain visible) */}
       <mesh rotation={[Math.PI / 2.3, 0, 0]}>
         <ringGeometry args={[2.4, 5.5, 32]} />
         <meshBasicMaterial
@@ -188,6 +191,7 @@ function BlackHole() {
           transparent
           opacity={0.2}
           side={THREE.DoubleSide}
+          fog={false}
         />
       </mesh>
     </group>
@@ -319,7 +323,7 @@ function TesseractScene({ parentContainer }) {
       {/* 5D wireframe tunnel grid */}
       <GridTunnel />
 
-      {/* Gargantua Black Hole Event Horizon & Accretion Disk */}
+      {/* Gargantua Black Hole Event Horizon & Accretion Disk (visible from start due to fog=false) */}
       <BlackHole />
 
       {/* Spiral list of 50+ skill badges */}
@@ -354,7 +358,7 @@ export default function SkillsTesseract() {
           className="w-full h-full"
         >
           <color attach="background" args={['#0a0a0a']} />
-          {/* Depth Fog prevents abrupt object popping */}
+          {/* Depth Fog prevents abrupt object popping for normal elements */}
           <fog attach="fog" args={['#0a0a0a', 15, 55]} />
           
           <ambientLight intensity={0.5} />
