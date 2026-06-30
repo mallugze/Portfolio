@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import HollowPurpleIntro from './components/HollowPurpleIntro';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -14,20 +15,27 @@ export default function App() {
       {/* Intro sequence Overlay */}
       <HollowPurpleIntro onComplete={() => setIntroFinished(true)} />
 
-      {/* Main Content (only fully visible and active after intro finishes) */}
-      <div className={`transition-opacity duration-1000 ease-out ${introFinished ? 'opacity-100' : 'opacity-0 h-screen overflow-hidden'}`}>
-        
-        {/* Horizontal Top Navigation Bar */}
-        <Navbar />
+      {/* Main Content (only mounted and animated in after intro finishes) */}
+      <AnimatePresence>
+        {introFinished && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            {/* Horizontal Top Navigation Bar */}
+            <Navbar />
 
-        {/* Page Sections */}
-        <main>
-          <Hero />
-          <SkillsTesseract />
-          <Projects />
-          <Contact />
-        </main>
-      </div>
+            {/* Page Sections */}
+            <main>
+              <Hero />
+              <SkillsTesseract />
+              <Projects />
+              <Contact />
+            </main>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
