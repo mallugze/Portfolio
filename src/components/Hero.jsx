@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { SplineScene } from '@/components/ui/splite';
 
 export default function Hero() {
   return (
@@ -109,14 +110,20 @@ export default function Hero() {
             <div className="absolute top-1/4 right-1/4 w-40 h-40 rounded-full bg-neonPurple/20 blur-3xl filter animate-pulse" />
             <div className="absolute bottom-1/4 left-1/4 w-40 h-40 rounded-full bg-neonBlue/20 blur-3xl filter animate-pulse" />
 
-            {/* The Image itself */}
-            <img
-              src="/hero_ai_graphic.png"
-              alt="AI Circuit Graphic"
-              className="w-full h-full object-cover rounded-xl filter brightness-95 contrast-105 border border-white/5"
-              onError={(e) => {
-                e.target.style.display = 'none';
-              }}
+            {/* Interactive 3D Robot Scene */}
+            <SplineScene
+              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              className="w-full h-full"
+              fallback={
+                <img
+                  src="/hero_ai_graphic.png"
+                  alt="AI Circuit Graphic"
+                  className="w-full h-full object-cover rounded-xl filter brightness-95 contrast-105 border border-white/5"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+              }
             />
           </div>
         </motion.div>
