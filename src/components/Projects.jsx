@@ -43,7 +43,7 @@ const PROJECTS_DATA = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative min-h-screen py-24 px-6 bg-[#0a0a0a] dots-bg">
+    <section id="projects" className="relative min-h-screen py-24 px-6 bg-black dots-bg">
       <div className="w-full max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

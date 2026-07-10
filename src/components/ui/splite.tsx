@@ -51,10 +51,12 @@ export function SplineScene({ scene, className, fallback }: SplineSceneProps) {
           </div>
         }
       >
-        <Spline
-          scene={scene}
-          className={className}
-        />
+        <div className={`w-full h-full overflow-hidden relative ${className || ''}`}>
+          <Spline
+            scene={scene}
+            className="absolute inset-0 w-full h-full scale-[1.08] origin-bottom-right translate-x-[4%] translate-y-[4%]"
+          />
+        </div>
       </Suspense>
     </ErrorBoundary>
   )

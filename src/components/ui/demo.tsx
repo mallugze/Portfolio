@@ -1,37 +1,39 @@
-'use client'
+'use client';
 
-import { SplineScene } from "@/components/ui/splite";
-import { Card } from "@/components/ui/card"
-import { Spotlight } from "@/components/ui/spotlight"
- 
-export function SplineSceneBasic() {
+import React from 'react';
+import { InteractiveRobotSpline } from '@/components/ui/interactive-3d-robot'
+
+export function Section() { 
+  const ROBOT_SCENE_URL = "https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode";
+
   return (
-    <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
+    <div className="relative w-screen h-screen overflow-hidden">
+      <InteractiveRobotSpline
+        scene={ROBOT_SCENE_URL}
+        className="absolute inset-0 z-0" 
       />
-      
-      <div className="flex h-full">
-        {/* Left content */}
-        <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-            Interactive 3D
-          </h1>
-          <p className="mt-4 text-neutral-300 max-w-lg">
-            Bring your UI to life with beautiful 3D scenes. Create immersive experiences 
-            that capture attention and enhance your design.
-          </p>
-        </div>
 
-        {/* Right content */}
-        <div className="flex-1 relative">
-          <SplineScene 
-            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-            className="w-full h-full"
-          />
+      <div className="
+        absolute inset-0 z-10
+        pt-20 md:pt-32 lg:pt-40
+        px-4 md:px-8            
+        pointer-events-none     
+      ">
+        <div className="
+          text-center             // Center the text within this block
+          text-white              // Text color
+          drop-shadow-lg          // Text shadow for readability
+          w-full max-w-2xl        // Max width for readability on large screens
+          mx-auto                 // Center the block horizontally
+        ">
+          <h1 className="
+            text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
+            font-bold 
+          ">
+            This is interactive 3d robot Whobee
+          </h1>
         </div>
       </div>
-    </Card>
-  )
+    </div> 
+  );
 }

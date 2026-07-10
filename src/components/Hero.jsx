@@ -6,11 +6,32 @@ import { SplineScene } from '@/components/ui/splite';
 export default function Hero() {
   return (
     <section id="about" className="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 lg:py-0 overflow-hidden dots-bg">
-      {/* Main Grid Content (Mobile friendly, centered 50/50 split) */}
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center z-10">
-        
+      {/* 3D Robot Background */}
+      <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 h-full z-0 pointer-events-auto mix-blend-screen">
+        <SplineScene
+          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+          className="w-full h-full"
+          fallback={
+            <div className="absolute inset-0 bg-darkBg flex items-center justify-center">
+              <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-neonPurple/20 blur-3xl filter animate-pulse" />
+              <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-neonBlue/20 blur-3xl filter animate-pulse" />
+              <img
+                src="/hero_ai_graphic.png"
+                alt="AI Circuit Graphic"
+                className="max-w-2xl w-full h-auto opacity-45 filter brightness-95 contrast-105 border border-white/5 rounded-2xl"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+            </div>
+          }
+        />
+      </div>
+
+      {/* Main Content Overlay */}
+      <div className="w-full max-w-7xl mx-auto z-10 relative pointer-events-none">
         {/* Left Side: Details */}
-        <div className="flex flex-col justify-center text-left w-full">
+        <div className="flex flex-col justify-center text-left w-full lg:w-1/2 pointer-events-auto">
           {/* Huge Name: MALLIKARJUN */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -97,36 +118,6 @@ export default function Hero() {
             </a>
           </motion.div>
         </div>
-
-        {/* Right Side: Glassmorphism Visual Block */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center items-center w-full max-w-md lg:max-w-none mx-auto"
-        >
-          <div className="relative w-full aspect-[4/3] sm:aspect-square lg:aspect-[5/6] rounded-2xl overflow-hidden glass p-3 border border-white/10 shadow-2xl flex items-center justify-center">
-            {/* Ambient Background glows */}
-            <div className="absolute top-1/4 right-1/4 w-40 h-40 rounded-full bg-neonPurple/20 blur-3xl filter animate-pulse" />
-            <div className="absolute bottom-1/4 left-1/4 w-40 h-40 rounded-full bg-neonBlue/20 blur-3xl filter animate-pulse" />
-
-            {/* Interactive 3D Robot Scene */}
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
-              fallback={
-                <img
-                  src="/hero_ai_graphic.png"
-                  alt="AI Circuit Graphic"
-                  className="w-full h-full object-cover rounded-xl filter brightness-95 contrast-105 border border-white/5"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                  }}
-                />
-              }
-            />
-          </div>
-        </motion.div>
       </div>
 
       {/* Elegant scroll indicator */}

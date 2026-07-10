@@ -100,7 +100,7 @@ export default function HollowPurpleIntro({ onComplete }) {
   return (
     <motion.div
       animate={overlayControls}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#0a0a0a] overflow-hidden select-none"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black overflow-hidden select-none"
     >
       {/* Background subtle neon radial gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(168,85,247,0.1)_0%,_transparent_65%)]" />

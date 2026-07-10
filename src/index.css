@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #0a0a0a;
+    background-color: #000000;
     color: #e5e7eb;
     font-family: 'Inter', sans-serif;
   }
@@ -18,7 +18,7 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
   background: #222;
@@ -103,4 +103,35 @@
     transform: rotate(360deg);
   }
 }
+
+/* Silvery Glow Text Effect */
+.silvery-glow {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
+  animation: silver-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes silver-pulse {
+  0% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.4);
+    opacity: 0.85;
+  }
+  100% {
+    text-shadow: 0 0 14px rgba(255, 255, 255, 1), 0 0 25px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+    opacity: 1;
+  }
+}
+
+/* Hide Spline Logo Watermark */
+a[href*="spline.design"],
+a[href*="spline"],
+[class*="spline-logo"],
+div[style*="pointer-events: none"] > a {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+
 

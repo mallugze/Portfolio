@@ -377,7 +377,7 @@ export default function SkillsTesseract() {
   const containerRef = useRef();
 
   return (
-    <section ref={containerRef} id="skills" className="relative h-[300vh] bg-[#0a0a0a] overflow-visible">
+    <section ref={containerRef} id="skills" className="relative h-[300vh] bg-black overflow-visible">
       {/* Sticky container */}
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         {/* Floating section descriptors */}
@@ -393,9 +393,9 @@ export default function SkillsTesseract() {
           gl={{ antialias: true }}
           className="w-full h-full"
         >
-          <color attach="background" args={['#0a0a0a']} />
+          <color attach="background" args={['#000000']} />
           {/* Depth Fog prevents abrupt object popping for normal elements */}
-          <fog attach="fog" args={['#0a0a0a', 15, 55]} />
+          <fog attach="fog" args={['#000000', 15, 55]} />
           
           <ambientLight intensity={0.5} />
           <directionalLight position={[0, 10, 5]} intensity={1.0} />
