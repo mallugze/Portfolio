@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, CheckCircle, Github, Linkedin, Mail } from 'lucide-react';
+import { Send, CheckCircle } from 'lucide-react';
 import { InteractiveRobotSpline } from '@/components/ui/interactive-3d-robot';
+import { AnimatedGithub, AnimatedLinkedin, AnimatedMail } from '@/components/ui/AnimatedSocialIcon';
 
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -159,13 +160,13 @@ export default function Contact() {
           </span>
           <div className="flex gap-6 text-gray-400">
             <a href="https://github.com/mallugze" target="_blank" rel="noopener noreferrer" className="hover:text-neonBlue transition-colors flex items-center gap-1.5 text-xs font-mono">
-              <Github className="w-4 h-4" /> Github
+              <AnimatedGithub className="w-4 h-4" /> Github
             </a>
             <a href="https://www.linkedin.com/in/mallikarjun-842509326" target="_blank" rel="noopener noreferrer" className="hover:text-neonPurple transition-colors flex items-center gap-1.5 text-xs font-mono">
-              <Linkedin className="w-4 h-4" /> LinkedIn
+              <AnimatedLinkedin className="w-4 h-4" /> LinkedIn
             </a>
             <a href="mailto:mallikarjunpx@gmail.com" className="hover:text-neonPink transition-colors flex items-center gap-1.5 text-xs font-mono">
-              <Mail className="w-4 h-4" /> Email
+              <AnimatedMail className="w-4 h-4" /> Email
             </a>
           </div>
         </div>

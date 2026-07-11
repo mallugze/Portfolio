@@ -1,9 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { FileText, ArrowRight } from 'lucide-react';
 import { SplineScene } from '@/components/ui/splite';
+import GlassDock from '@/components/ui/glass-dock';
 
 export default function Hero() {
+  const dockItems = [
+    {
+      title: 'LinkedIn',
+      icon: () => null,
+      onClick: () => {
+        window.open('https://www.linkedin.com/in/mallikarjun-842509326', '_blank');
+      }
+    },
+    {
+      title: 'GitHub',
+      icon: () => null,
+      onClick: () => {
+        window.open('https://github.com/mallugze', '_blank');
+      }
+    },
+    {
+      title: 'Email',
+      icon: () => null,
+      onClick: () => {
+        window.location.href = 'mailto:mallikarjunpx@gmail.com';
+      }
+    }
+  ];
+
+
   return (
     <section id="about" className="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 lg:py-0 overflow-hidden dots-bg">
       {/* 3D Robot Background */}
@@ -100,22 +126,14 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Social icons */}
+          {/* Floating Glass Dock (integrated under Hero details) */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex gap-5 mt-8 text-gray-455 pointer-events-auto"
+            className="mt-8 pointer-events-auto"
           >
-            <a href="https://github.com/mallugze" target="_blank" rel="noopener noreferrer" className="hover:text-neonBlue transition-colors" title="GitHub">
-              <Github className="w-5 h-5" />
-            </a>
-            <a href="https://www.linkedin.com/in/mallikarjun-842509326" target="_blank" rel="noopener noreferrer" className="hover:text-neonPurple transition-colors" title="LinkedIn">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="mailto:mallikarjunpx@gmail.com" className="hover:text-neonPink transition-colors" title="Email">
-              <Mail className="w-5 h-5" />
-            </a>
+            <GlassDock items={dockItems} />
           </motion.div>
         </div>
       </div>
