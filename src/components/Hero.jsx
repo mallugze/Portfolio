@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section id="about" className="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 lg:py-0 overflow-hidden dots-bg">
       {/* 3D Robot Background */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 h-full z-0 pointer-events-auto mix-blend-screen">
+      <div className="absolute inset-y-0 left-0 w-full lg:w-[150vw] h-full z-0 pointer-events-auto mix-blend-screen">
         <SplineScene
           scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
           className="w-full h-full"
@@ -31,7 +31,7 @@ export default function Hero() {
       {/* Main Content Overlay */}
       <div className="w-full max-w-7xl mx-auto z-10 relative pointer-events-none">
         {/* Left Side: Details */}
-        <div className="flex flex-col justify-center text-left w-full lg:w-1/2 pointer-events-auto">
+        <div className="flex flex-col justify-center text-left w-full lg:w-1/2 pointer-events-none">
           {/* Huge Name: MALLIKARJUN */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -80,7 +80,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap gap-4 items-center"
+            className="flex flex-wrap gap-4 items-center pointer-events-auto"
           >
             <a
               href="#contact"
@@ -105,7 +105,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="flex gap-5 mt-8 text-gray-455"
+            className="flex gap-5 mt-8 text-gray-455 pointer-events-auto"
           >
             <a href="https://github.com/mallugze" target="_blank" rel="noopener noreferrer" className="hover:text-neonBlue transition-colors" title="GitHub">
               <Github className="w-5 h-5" />
