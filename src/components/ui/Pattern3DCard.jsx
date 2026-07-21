@@ -67,19 +67,17 @@ export default function Pattern3DCard({
           </div>
 
           {/* Action Button: ONLY GitHub */}
-          <div>
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleOpenRepo}
-              className="see-more group"
-              style={{ color: accentBorder }}
-            >
-              <FaGithub className="w-4 h-4 pointer-events-none" />
-              <span className="pointer-events-none">GITHUB REPOSITORY</span>
-            </a>
-          </div>
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleOpenRepo}
+            className="see-more group"
+            style={{ color: accentBorder }}
+          >
+            <FaGithub className="w-4 h-4 pointer-events-none" />
+            <span className="pointer-events-none">GITHUB REPOSITORY</span>
+          </a>
         </div>
       </div>
     </div>
