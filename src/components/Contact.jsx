@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle } from 'lucide-react';
 import { InteractiveRobotSpline } from '@/components/ui/interactive-3d-robot';
 import { AnimatedGithub, AnimatedLinkedin, AnimatedMail } from '@/components/ui/AnimatedSocialIcon';
+import SocialFlipButton from '@/components/ui/SocialFlipButton';
 
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -143,12 +144,15 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Side: Interactive 3D Robot Whobee */}
-          <div className="w-full h-[450px] lg:h-[550px] relative pointer-events-auto mix-blend-screen transform lg:translate-y-16">
-            <InteractiveRobotSpline
-              scene="https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode"
-              className="w-full h-full"
-            />
+          {/* Right Side: Interactive 3D Robot Whobee with Social Flip Button */}
+          <div className="w-full flex flex-col items-center justify-center">
+            <SocialFlipButton className="mb-2 z-20" />
+            <div className="w-full h-[450px] lg:h-[500px] relative pointer-events-auto mix-blend-screen">
+              <InteractiveRobotSpline
+                scene="https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode"
+                className="w-full h-full"
+              />
+            </div>
           </div>
 
         </div>
