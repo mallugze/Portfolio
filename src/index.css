@@ -416,7 +416,120 @@ div[style*="pointer-events: none"] > a {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -5px;
 }
 
+/* 3D Pattern Shifting Project Card Styles */
+.pattern-3d-parent {
+  width: 100%;
+  perspective: 1000px;
+}
 
+.pattern-3d-card {
+  padding-top: 50px;
+  border-radius: 20px;
+  border: 3px solid #1f1f2e;
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0) 18.75%, rgba(255, 255, 255, 0.08) 0 31.25%, rgba(0, 0, 0, 0) 0),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.04) -6.25% 6.25%, #0f0f17 0 18.75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 0;
+  background-color: #0d0d14;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 30px 30px -10px;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
 
+.pattern-3d-card:hover {
+  background-position: -100px 100px, -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 25deg);
+  box-shadow: rgba(0, 0, 0, 0.9) 20px 40px 35px -10px;
+}
 
+.pattern-3d-content-box {
+  border-radius: 0 0 16px 16px;
+  transition: all 0.5s ease-in-out;
+  padding: 55px 28px 28px 28px;
+  transform-style: preserve-3d;
+}
 
+.pattern-3d-content-box .card-title {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.pattern-3d-content-box .card-title:hover {
+  transform: translate3d(0px, 0px, 65px);
+}
+
+.pattern-3d-content-box .card-content {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 30px);
+}
+
+.pattern-3d-content-box .card-content:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.pattern-3d-content-box .see-more {
+  cursor: pointer;
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #141414;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pattern-3d-content-box .see-more:hover {
+  transform: translate3d(0px, 0px, 65px);
+  background: #000000;
+  color: #ffffff !important;
+}
+
+.pattern-3d-date-box {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  height: 60px;
+  width: 60px;
+  background: #141414;
+  border-radius: 12px;
+  padding: 8px;
+  transform: translate3d(0px, 0px, 80px);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 17px 10px -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.pattern-3d-date-box span {
+  display: block;
+  text-align: center;
+}
+
+.pattern-3d-date-box .month {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.pattern-3d-date-box .date {
+  font-size: 20px;
+  font-weight: 900;
+}
