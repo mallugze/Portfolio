@@ -23,9 +23,15 @@ export default function Pattern3DCard({
 
         {/* Content Box */}
         <div className="pattern-3d-content-box" style={{ background: boxBg }}>
-          <span className="card-title font-display" style={{ color: textColor }}>
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-title font-display cursor-pointer"
+            style={{ color: textColor }}
+          >
             {title}
-          </span>
+          </a>
           <p className="card-content" style={{ color: textColor === '#ffffff' ? 'rgba(255,255,255,0.85)' : 'rgba(20,20,20,0.85)' }}>
             {description}
           </p>
@@ -56,8 +62,8 @@ export default function Pattern3DCard({
               className="see-more group"
               style={{ color: accentBorder }}
             >
-              <FaGithub className="w-3.5 h-3.5" />
-              <span>GitHub Repository</span>
+              <FaGithub className="w-4 h-4" />
+              <span>GITHUB REPOSITORY</span>
             </a>
           </div>
         </div>
