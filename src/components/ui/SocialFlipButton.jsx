@@ -5,22 +5,22 @@ import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import {
     FaGithub,
-    FaTwitter,
-    FaFacebook,
-    FaInstagram,
+    FaWhatsapp,
     FaLinkedin,
+    FaInstagram,
+    FaPhone,
     FaEnvelope,
     FaDiscord,
 } from "react-icons/fa";
 
 const defaultItems = [
     { letter: "C", icon: <FaGithub />, label: "Github", href: "https://github.com/mallugze" },
-    { letter: "O", icon: <FaTwitter />, label: "Twitter", href: "#" },
+    { letter: "O", icon: <FaWhatsapp />, label: "WhatsApp", href: "https://wa.me/918431286869" },
     { letter: "N", icon: <FaLinkedin />, label: "LinkedIn", href: "https://www.linkedin.com/in/mallikarjun-842509326" },
-    { letter: "T", icon: <FaInstagram />, label: "Instagram", href: "#" },
-    { letter: "A", icon: <FaFacebook />, label: "Facebook", href: "#" },
+    { letter: "T", icon: <FaInstagram />, label: "Instagram", href: "https://www.instagram.com/mallugze?igsh=MXN5dGt5OTNrbzRhcg==" },
+    { letter: "A", icon: <FaPhone />, label: "Cell", href: "tel:+918431286869" },
     { letter: "C", icon: <FaEnvelope />, label: "Email", href: "mailto:mallikarjunpx@gmail.com" },
-    { letter: "T", icon: <FaDiscord />, label: "Discord", href: "#" },
+    { letter: "T", icon: <FaDiscord />, label: "Discord", href: "https://discord.com/users/1206157845741961298" },
 ];
 
 const SocialFlipNode = ({
