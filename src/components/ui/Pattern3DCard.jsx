@@ -12,9 +12,21 @@ export default function Pattern3DCard({
   textColor = '#ffffff',
   accentBorder = '#60a5fa',
 }) {
+  const handleOpenRepo = (e) => {
+    if (e) {
+      e.stopPropagation();
+    }
+    if (githubUrl) {
+      window.open(githubUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div className="pattern-3d-parent select-none">
-      <div className="pattern-3d-card">
+      <div
+        className="pattern-3d-card cursor-pointer"
+        onClick={handleOpenRepo}
+      >
         {/* Floating 3D Date/Category Box at top right */}
         <div className="pattern-3d-date-box" style={{ border: `1px solid ${accentBorder}` }}>
           <span className="month" style={{ color: accentBorder }}>{category}</span>
@@ -27,6 +39,7 @@ export default function Pattern3DCard({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleOpenRepo}
             className="card-title font-display cursor-pointer"
             style={{ color: textColor }}
           >
@@ -59,11 +72,12 @@ export default function Pattern3DCard({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleOpenRepo}
               className="see-more group"
               style={{ color: accentBorder }}
             >
-              <FaGithub className="w-4 h-4" />
-              <span>GITHUB REPOSITORY</span>
+              <FaGithub className="w-4 h-4 pointer-events-none" />
+              <span className="pointer-events-none">GITHUB REPOSITORY</span>
             </a>
           </div>
         </div>
