@@ -382,9 +382,9 @@ export default function SkillsTesseract() {
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         {/* Floating section descriptors */}
         <div className="absolute top-24 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none select-none">
-          <span className="text-xs font-mono tracking-widest text-neonPurple uppercase">// Cosmic Void</span>
+          <span className="text-xs font-mono tracking-widest text-white uppercase"> COSMIC VOID</span>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white mt-1">Tech Stack</h2>
-          <p className="text-gray-500 text-xs mt-1">Scroll down to approach the singularity core</p>
+          <p className="text-gray-500 text-xs mt-1">Scroll Down to Approach The Singularity Core</p>
         </div>
 
         {/* 3D Canvas */}

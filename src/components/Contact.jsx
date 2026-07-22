@@ -38,9 +38,9 @@ export default function Contact() {
           {/* Left Side: Details & Form */}
           <div className="w-full text-left">
             {/* Section Header */}
-            <span className="text-xs font-mono tracking-widest text-neonPink uppercase">// Let's Connect</span>
+            <span className="text-xs font-mono tracking-widest text-white uppercase"> Contact Me</span>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white mt-2 mb-4">
-              Contact Me
+              Let's Connect
             </h2>
             <p className="text-gray-400 text-sm sm:text-base mb-8 max-w-md">
               Have an exciting project, opening, or question? Send me a message and I'll get back to you as soon as possible.
