@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FileText, ArrowRight } from 'lucide-react';
 import { SplineScene } from '@/components/ui/splite';
 import GlassDock from '@/components/ui/glass-dock';
+import CreepyButton from '@/components/ui/CreepyButton';
 
 export default function Hero() {
   const dockItems = [
@@ -28,7 +29,6 @@ export default function Hero() {
       }
     }
   ];
-
 
   return (
     <section id="about" className="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 lg:py-0 overflow-hidden dots-bg">
@@ -119,10 +119,16 @@ export default function Hero() {
             <a
               href="/resume.pdf"
               download="Mallikarjun_Resume.pdf"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-gray-300 bg-white/5 border border-white/10 hover:bg-white/10 hover:text-white transition-all duration-300 transform hover:-translate-y-0.5"
+              className="inline-block"
             >
-              <FileText className="w-4 h-4 text-neonPurple" />
-              Download Resume
+              <CreepyButton
+                coverClassName="bg-[#18181b] border border-white/10 text-gray-300 hover:text-white"
+              >
+                <div className="flex items-center gap-2 whitespace-nowrap">
+                  <FileText className="w-4 h-4 text-neonPurple" />
+                  <span className="whitespace-nowrap">Download Resume</span>
+                </div>
+              </CreepyButton>
             </a>
           </motion.div>
 

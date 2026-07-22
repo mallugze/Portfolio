@@ -136,7 +136,13 @@
 a[href*="spline.design"],
 a[href*="spline"],
 [class*="spline-logo"],
-div[style*="pointer-events: none"]>a {
+div[style*="pointer-events: none"] > a,
+div:has(> a[href*="spline"]),
+div[style*="bottom"][style*="right"]:has(a),
+canvas + a,
+canvas + div,
+canvas ~ a,
+canvas ~ div {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;

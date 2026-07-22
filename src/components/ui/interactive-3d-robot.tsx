@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect, useRef } from 'react';
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
 interface InteractiveRobotSplineProps {
@@ -9,6 +9,30 @@ interface InteractiveRobotSplineProps {
 }
 
 export function InteractiveRobotSpline({ scene, className }: InteractiveRobotSplineProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const removeWatermark = () => {
+      if (containerRef.current) {
+        const links = containerRef.current.querySelectorAll('a[href*="spline"], a[target="_blank"]');
+        links.forEach((link) => {
+          const el = link as HTMLElement;
+          el.style.display = 'none';
+          el.style.visibility = 'hidden';
+          el.style.opacity = '0';
+          if (el.parentElement) {
+            el.parentElement.style.display = 'none';
+            el.parentElement.style.visibility = 'hidden';
+            el.parentElement.style.opacity = '0';
+          }
+        });
+      }
+    };
+
+    const interval = setInterval(removeWatermark, 300);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Suspense
       fallback={
@@ -20,7 +44,7 @@ export function InteractiveRobotSpline({ scene, className }: InteractiveRobotSpl
         </div>
       }
     >
-      <div className={`w-full h-full overflow-hidden relative ${className || ''}`}>
+      <div ref={containerRef} className={`w-full h-full overflow-hidden relative ${className || ''}`}>
         <Spline
           scene={scene}
           className="absolute inset-0 w-full h-full scale-[1.08] origin-bottom-right translate-x-[4%] translate-y-[4%]" 
