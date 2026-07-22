@@ -70,16 +70,15 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          {/* Tag / Badge */}
-          <motion.div
+          {/* Subtitle Text */}
+          <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 w-fit mb-6"
+            className="font-display font-bold text-lg sm:text-xl md:text-2xl tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-550 mb-6"
           >
-            <span className="w-2 h-2 rounded-full bg-neonPurple animate-pulse" />
-            <span className="text-xs font-mono tracking-wider text-gray-300">AI & ML Engineer</span>
-          </motion.div>
+            AI & ML Engineer
+          </motion.p>
 
           {/* Heading */}
           <motion.h1
@@ -98,7 +97,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mb-8"
           >
-            I am an AI & Machine Learning undergraduate passionate about building intelligent and scalable software solutions. My interests include Machine Learning, Large Language Models, backend development, and data-driven applications. I enjoy transforming complex problems into practical AI solutions through hands-on projects and continuously expanding my technical expertise.
+            I am an AIML undergraduate passionate about building intelligent and scalable software solutions. My interests include Machine Learning, Large Language Models, backend development, and data-driven applications. I enjoy transforming complex problems into practical AI solutions through hands-on projects and continuously expanding my technical expertise.
           </motion.p>
 
           {/* Button Actions */}
