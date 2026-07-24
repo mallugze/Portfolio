@@ -59,12 +59,11 @@ export default function Projects() {
       <div className="w-full max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-xs font-mono tracking-widest text-neonBlue uppercase">// Crafted Works</span>
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white mt-2 mb-4">
             Featured Projects
           </h2>
           <p className="text-gray-400 text-sm sm:text-base max-w-md mx-auto mb-4">
-            Hover over any project card to see the animated diagonal grid pattern shift & 3D title pop-out!
+            Building intelligent systems that combine LLMs, Machine Learning, and scalable software to solve meaningful real-world challenges.
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-neonBlue to-neonPurple mx-auto rounded-full" />
         </div>
