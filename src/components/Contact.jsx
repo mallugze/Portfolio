@@ -10,19 +10,45 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) return;
 
     setIsSubmitting(true);
-    // Simulate API request
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      // Send form data to mallikarjunpx@gmail.com via FormSubmit API
+      const res = await fetch('https://formsubmit.co/ajax/mallikarjunpx@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+          _subject: `New Portfolio Message from ${formState.name}`,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setFormState({ name: '', email: '', message: '' });
+      } else {
+        // Fallback to mailto link if API fails
+        const mailtoUrl = `mailto:mallikarjunpx@gmail.com?subject=${encodeURIComponent(`Portfolio Message from ${formState.name}`)}&body=${encodeURIComponent(`Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`)}`;
+        window.location.href = mailtoUrl;
+        setSubmitted(true);
+      }
+    } catch (err) {
+      // Fallback to mailto link on network error
+      const mailtoUrl = `mailto:mallikarjunpx@gmail.com?subject=${encodeURIComponent(`Portfolio Message from ${formState.name}`)}&body=${encodeURIComponent(`Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`)}`;
+      window.location.href = mailtoUrl;
       setSubmitted(true);
-      setFormState({ name: '', email: '', message: '' });
-      // Reset success message after 4 seconds
-      setTimeout(() => setSubmitted(false), 4000);
-    }, 1500);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
