@@ -263,21 +263,58 @@ function GargantuaBlackHole() {
   );
 }
 
-// High performance floating dust/particles
+// High performance glowing star particles
 function StarParticles() {
-  const count = 350;
+  const count = 400;
   const pointsRef = useRef();
 
-  const [positions, speeds] = useMemo(() => {
+  // Create soft glowing circular star texture on canvas
+  const starTexture = useMemo(() => {
+    if (typeof document === 'undefined') return null;
+    const canvas = document.createElement('canvas');
+    canvas.width = 64;
+    canvas.height = 64;
+    const ctx = canvas.getContext('2d');
+    
+    const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+    gradient.addColorStop(0.25, 'rgba(255, 255, 255, 0.85)');
+    gradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.35)');
+    gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 64, 64);
+    
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+    return texture;
+  }, []);
+
+  const [positions, speeds, colors] = useMemo(() => {
     const pos = new Float32Array(count * 3);
     const sp = new Float32Array(count);
+    const col = new Float32Array(count * 3);
+
+    const starPalette = [
+      new THREE.Color('#ffffff'), // Pure diamond white
+      new THREE.Color('#e0f2fe'), // Soft white-blue star
+      new THREE.Color('#38bdf8'), // Vibrant cyan star
+      new THREE.Color('#fef08a'), // Golden warm star
+      new THREE.Color('#c084fc'), // Deep cosmic violet star
+    ];
+
     for (let i = 0; i < count; i++) {
       pos[i * 3] = (Math.random() - 0.5) * 35; // x
       pos[i * 3 + 1] = (Math.random() - 0.5) * 28; // y
       pos[i * 3 + 2] = -Math.random() * 160; // z
       sp[i] = 7 + Math.random() * 9; // speed
+
+      const chosenColor = starPalette[Math.floor(Math.random() * starPalette.length)];
+      col[i * 3] = chosenColor.r;
+      col[i * 3 + 1] = chosenColor.g;
+      col[i * 3 + 2] = chosenColor.b;
     }
-    return [pos, sp];
+    return [pos, sp, col];
   }, []);
 
   useFrame((state, delta) => {
@@ -307,12 +344,19 @@ function StarParticles() {
           attach="attributes-position"
           args={[positions, 3]}
         />
+        <bufferAttribute
+          attach="attributes-color"
+          args={[colors, 3]}
+        />
       </bufferGeometry>
       <pointsMaterial
-        size={0.11}
-        color="#c084fc"
+        size={0.45}
+        map={starTexture}
+        vertexColors
         transparent
-        opacity={0.65}
+        opacity={0.85}
+        depthWrite={false}
+        blending={THREE.AdditiveBlending}
         sizeAttenuation
       />
     </points>
