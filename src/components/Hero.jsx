@@ -136,7 +136,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-8 pointer-events-auto"
+            className="mt-14 sm:mt-16 pointer-events-auto"
           >
             <GlassDock items={dockItems} />
           </motion.div>

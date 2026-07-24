@@ -473,12 +473,12 @@ export const GlassDock = React.forwardRef<HTMLDivElement, GlassDockProps>(
                                 animate={{
                                     opacity: 1,
                                     scale: 1,
-                                    y: -60,
+                                    y: -48,
                                     x: getTooltipPosition(hoveredIndex),
                                 }}
                                 exit={{ opacity: 0, scale: 0.92, y: 12 }}
                                 transition={{ type: 'spring', stiffness: 120, damping: 18 }}
-                                className="absolute top-0 left-0 pointer-events-none z-30"
+                                className="absolute top-0 left-0 pointer-events-none z-50"
                             >
                                 <div
                                     className={cn(
