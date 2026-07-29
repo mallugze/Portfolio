@@ -87,7 +87,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-none mb-4"
           >
-            Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-neonPurple">Intelligent</span> Systems
+            Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]">Intelligent</span> Systems
           </motion.h1>
 
           {/* Updated Bio Paragraph */}
@@ -109,10 +109,10 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-neonBlue to-neonPurple hover:brightness-110 shadow-neonBlue transition-all duration-300 transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-gray-300 bg-[#18181b] border border-white/10 hover:bg-white/10 hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]"
             >
               Get In Touch
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-neonPurple" />
             </a>
 
             <a

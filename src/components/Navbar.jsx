@@ -32,7 +32,7 @@ export default function Navbar() {
       {/* Bubble Menu Component */}
       <BubbleMenu
         logo={null}
-        menuBg="#a855f7" /* neonPurple theme */
+        menuBg="#000000ff" /* neonPurple theme */
         menuContentColor="#ffffff"
         useFixedPosition={true}
         className="navbar-bubble-menu"
