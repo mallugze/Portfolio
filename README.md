@@ -1,94 +1,129 @@
-# 🚀 Mallikarjun | AI & ML Engineer 3D Interactive Portfolio
+# 🚀 Mallikarjun -- AI & ML Engineer \| 3D Interactive Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-mallugze.vercel.app-6366F1?style=for-the-badge&logo=vercel&logoColor=white)](https://mallugze.vercel.app)
-[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
-[![Three.js](https://img.shields.io/badge/Three.js-WebGL-000000?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38BDF8?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+> **Building intelligent AI solutions and immersive web experiences.**
 
-A high-performance, immersive 3D developer portfolio built with **React**, **Three.js / React Three Fiber**, **Spline 3D**, **Framer Motion**, and **Tailwind CSS**. Deployed live on Vercel at [mallugze.vercel.app](https://mallugze.vercel.app).
+A modern, high-performance 3D developer portfolio built with **React**,
+**Three.js**, **React Three Fiber**, **Spline**, **Framer Motion**, and
+**Tailwind CSS** to showcase my AI/ML projects, technical skills,
+certifications, and professional journey through an interactive WebGL
+experience.
 
----
+------------------------------------------------------------------------
 
-## 📸 Portfolio Showcase
+```{=html}
+<p align="center">
+```
+[![Live
+Demo](https://img.shields.io/badge/🌐_Live_Demo-mallugze.vercel.app-6366F1?style=for-the-badge)](https://mallugze.vercel.app)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-WebGL-000000?style=for-the-badge&logo=three.js&logoColor=white)
+![Tailwind
+CSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Framer
+Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Spline](https://img.shields.io/badge/Spline-3D-FF6B6B?style=for-the-badge)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-<div align="center">
+```{=html}
+</p>
+```
+# 📸 Portfolio Preview
 
-### 🌌 Hero Section & 3D Interactive Robot
-![Home Page](screenshots/home_page.png)
+## 🏠 Hero Section
 
-### 🪐 3D Tech Stack Skill Orbit & Star Field
+![Hero](screenshots/home_page.png)
+
+## 🌌 Tech Stack Visualization
+
 ![Tech Stack](screenshots/tech_stack.png)
 
-### ✨ Domain & Intro Animation
-![Domain Animation](screenshots/domain_animation.png)
+## ✨ Domain Animation
 
-### 📦 3D Shifting-Pattern Project Cards
-![Featured Projects](screenshots/projects.png)
+![Domain](screenshots/domain_animation.png)
 
-### ✉️ Interactive Deoxy Contact Form & 3D Robot
-![Contact Section](screenshots/contact.png)
+## 📦 Featured Projects
 
-</div>
+![Projects](screenshots/projects.png)
 
----
+## ✉️ Contact Section
 
-## ✨ Key Features
+![Contact](screenshots/contact.png)
 
-- **🤖 Interactive 3D Robot Experience**: Integrated real-time Spline 3D WebGL scenes that react to user interaction and scroll position.
-- **🌌 3D Skill Tesseract & Star Particles**: Custom React Three Fiber canvas featuring a Gargantua-inspired event horizon, depth fog, and luminescent multi-colored star particles.
-- **🎴 3D Shifting-Pattern Project Cards**: Custom CSS 3D perspective project cards featuring animated diagonal grid backgrounds and Z-axis pop-out elevation on hover.
-- **🔄 C O N T A C T 3D Social Flip Button**: Interactive 180° 3D letter-to-icon flip nodes mapping directly to GitHub, LinkedIn, WhatsApp, Instagram, Email, and Discord.
-- **✉️ Neo-Brutalist Deoxy Contact Form**: Features a smooth sliding black background hover effect, FormSubmit API endpoint integration, and mailto fallback.
-- **👁️ Creepy-Eye Tracking Button**: Interactive "Download Resume" button with real-time cursor tracking pupils and spring physics tilt animation.
-- **📱 Fully Responsive & Mobile-Optimized**: Scaled 3D WebGL canvases and dynamic layouts ensuring 100% readability across mobile, tablet, and desktop viewports.
+------------------------------------------------------------------------
 
----
+# 💡 About the Portfolio
 
-## 🛠️ Tech Stack
+This portfolio was designed to go beyond a traditional developer
+website. It combines modern frontend technologies with immersive 3D
+graphics to create an engaging experience while highlighting my work in
+Artificial Intelligence, Machine Learning, Full-Stack Development, and
+Data Science.
 
-| Domain | Technologies Used |
-| :--- | :--- |
-| **Frontend Core** | React 18, Vite, JavaScript (ES6+), HTML5, CSS3 |
-| **3D & WebGL** | `@react-three/fiber`, `@react-three/drei`, Three.js, `@splinetool/react-spline` |
-| **Animations** | Framer Motion, GSAP |
-| **Styling** | Tailwind CSS, Vanilla CSS 3D Transforms, Glassmorphism |
-| **Icons & Media** | React Icons, Lucide React |
-| **Deployment** | Vercel |
+The primary goal was to build a portfolio that feels like an application
+rather than a static webpage while maintaining excellent responsiveness
+and performance.
 
----
+------------------------------------------------------------------------
 
-## 🚀 Quick Start / Local Setup
+# ✨ Key Features
 
-Follow these steps to run the portfolio locally on your machine:
+-   🤖 Interactive 3D Spline Robot
+-   🌌 React Three Fiber Skill Visualization
+-   🎴 Interactive Project Showcase
+-   ⚡ Smooth Framer Motion & GSAP Animations
+-   📄 Animated Resume Download Button
+-   ✉️ Modern Contact Form
+-   🔗 Interactive Social Links
+-   📱 Fully Responsive Design
 
-### 1. Clone the repository
-```bash
+------------------------------------------------------------------------
+
+# 🏗️ Architecture
+
+``` mermaid
+flowchart TD
+User --> React
+React --> Components
+Components --> ThreeJS
+ThreeJS --> ReactThreeFiber
+Components --> FramerMotion
+Components --> TailwindCSS
+React --> Vercel
+```
+
+# 🛠️ Tech Stack
+
+**Frontend:** React, Vite, JavaScript, HTML5, CSS3
+
+**3D Graphics:** Three.js, React Three Fiber, Drei, Spline
+
+**Animations:** Framer Motion, GSAP
+
+**Styling:** Tailwind CSS, Glassmorphism
+
+**Deployment:** Vercel
+
+
+------------------------------------------------------------------------
+
+# 💻 Local Development
+
+``` bash
 git clone https://github.com/mallugze/Portfolio.git
+
 cd Portfolio
-```
 
-### 2. Install dependencies
-```bash
 npm install
-```
 
-### 3. Start development server
-```bash
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 4. Build for production
-```bash
-npm run build
-```
+------------------------------------------------------------------------
 
----
+# 📂 Project Structure
 
-## 📂 Project Structure
-
-```
+``` text
 mallu_portfolio/
 ├── public/
 │   ├── favicon.svg
@@ -118,22 +153,31 @@ mallu_portfolio/
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
-├── index.html
 ├── package.json
-├── tailwind.config.js
-└── vite.config.js
+├── vite.config.js
+└── README.md
 ```
 
----
+------------------------------------------------------------------------
 
-## 🤝 Connect & Contact
+# 🌐 Live Demo
 
-- **Live Website**: [mallugze.vercel.app](https://mallugze.vercel.app)
-- **LinkedIn**: [Mallikarjun](https://www.linkedin.com/in/mallikarjun-842509326)
-- **Email**: [mallikarjunpx@gmail.com](mailto:mallikarjunpx@gmail.com)
+**https://mallugze.vercel.app**
 
----
+------------------------------------------------------------------------
 
-<div align="center">
-  <sub>Designed & Developed with ❤️ by <b>Mallikarjun</b></sub>
-</div>
+# 👨‍💻 Developed By
+
+## Mallikarjun
+
+AI & Machine Learning Engineer
+
+📧 mallikarjunpx@gmail.com
+
+💼 https://www.linkedin.com/in/mallikarjun-842509326
+
+🌐 https://mallugze.vercel.app
+
+------------------------------------------------------------------------
+
+# ⭐ If you like this project, consider giving it a Star!
