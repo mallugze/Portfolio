@@ -12,7 +12,7 @@ export default function Navbar() {
 
         {/* Nav Link Container */}
         <div className="flex gap-2 sm:gap-4 items-center relative mr-16">
-          {/* "Click on this" Link */}
+          {/* "NAVIGATION" Link */}
           <a
             href="#"
             onClick={(e) => {
@@ -24,7 +24,7 @@ export default function Navbar() {
             }}
             className="silvery-glow font-mono text-xs uppercase tracking-wider font-bold mr-2 cursor-pointer"
           >
-            Click on this
+            NAVIGATION
           </a>
         </div>
       </nav>

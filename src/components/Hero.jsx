@@ -109,7 +109,7 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-gray-300 bg-[#18181b] border border-white/10 hover:bg-white/10 hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-white bg-[#18181b] border border-neonPurple/40 hover:border-neonPurple hover:bg-neonPurple/10 shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all duration-300 transform hover:-translate-y-0.5"
             >
               Get In Touch
               <ArrowRight className="w-4 h-4 text-neonPurple" />
@@ -121,7 +121,7 @@ export default function Hero() {
               className="inline-block"
             >
               <CreepyButton
-                coverClassName="bg-[#18181b] border border-white/10 text-gray-300 hover:text-white"
+                coverClassName="bg-[#18181b] border border-white/20 text-gray-200 hover:text-white hover:border-white/40 shadow-[0_0_15px_rgba(255,255,255,0.06)]"
               >
                 <div className="flex items-center gap-2 whitespace-nowrap">
                   <FileText className="w-4 h-4 text-neonPurple" />
@@ -143,10 +143,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Elegant scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 select-none pointer-events-none opacity-45">
-        <span className="text-[10px] uppercase font-mono tracking-widest text-gray-500">Scroll Down</span>
-        <div className="w-[1px] h-10 bg-gradient-to-b from-gray-500 to-transparent" />
+      {/* High-contrast elegant scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 select-none pointer-events-none opacity-85">
+        <span className="text-[10px] uppercase font-mono tracking-widest text-gray-300 font-semibold">Scroll Down</span>
+        <div className="w-[1px] h-10 bg-gradient-to-b from-gray-300 via-neonPurple/60 to-transparent" />
       </div>
     </section>
   );
