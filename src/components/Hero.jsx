@@ -33,7 +33,7 @@ export default function Hero() {
   return (
     <section id="about" className="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 lg:py-0 overflow-hidden dots-bg">
       {/* 3D Robot Background */}
-      <div className="absolute inset-y-0 left-0 w-full lg:w-[150vw] h-full z-0 pointer-events-auto mix-blend-screen">
+      <div className="absolute inset-y-0 left-0 w-full lg:w-[150vw] h-full z-0 pointer-events-auto mix-blend-screen opacity-50 sm:opacity-75 lg:opacity-100 transition-opacity duration-300">
         <SplineScene
           scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
           className="w-full h-full"
