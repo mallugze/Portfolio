@@ -9,22 +9,19 @@ an immersive WebGL experience.
 
 ------------------------------------------------------------------------
 
-
 <p align="center">
 
-`<a href="https://mallugze.vercel.app">`{=html}`<img src="https://img.shields.io/badge/🌐_LIVE_DEMO-MALLUGZE.VERCEL.APP-6366F1?style=for-the-badge">`{=html}`</a>`{=html}
-`<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black">`{=html}
-`<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white">`{=html}
-`<img src="https://img.shields.io/badge/Three.js-WebGL-000000?style=for-the-badge&logo=three.js&logoColor=white">`{=html}
-`<img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white">`{=html}
-`<img src="https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white">`{=html}
-`<img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge">`{=html}
-`<img src="https://img.shields.io/badge/Spline-3D-FF6B6B?style=for-the-badge">`{=html}
-`<img src="https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white">`{=html}
-
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-mallugze.vercel.app-6366F1?style=for-the-badge)](https://mallugze.vercel.app)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-WebGL-000000?style=for-the-badge&logo=three.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge)
+![Spline](https://img.shields.io/badge/Spline-3D-FF6B6B?style=for-the-badge)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 </p>
-
 
 ------------------------------------------------------------------------
 
@@ -106,16 +103,7 @@ B --> I[Vercel Deployment]
 
 **Deployment:** Vercel
 
-------------------------------------------------------------------------
 
-# ⚡ Performance
-
--   Lazy-loaded assets
--   Optimized WebGL rendering
--   Responsive canvas scaling
--   Smooth animations
--   Fast Vite builds
--   Mobile-first layout
 
 ------------------------------------------------------------------------
 
@@ -158,16 +146,6 @@ mallu_portfolio/
 └── README.md
 ```
 
-------------------------------------------------------------------------
-
-# 🚀 Future Roadmap
-
--   🌙 Dark / Light Theme
--   🤖 AI Assistant
--   📝 Blog Section
--   📊 Visitor Analytics
--   🌍 Multi-language Support
--   📁 More Featured Projects
 
 ------------------------------------------------------------------------
 
@@ -194,6 +172,3 @@ AI & Machine Learning Engineer
 ::: {align="center"}
 ### ⭐ If you like this project, consider giving it a Star!
 
-Built with ❤️ using **React**, **Three.js**, **React Three Fiber**,
-**Spline**, **Framer Motion**, and **Tailwind CSS**.
-:::
