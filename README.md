@@ -1,33 +1,33 @@
-# 🚀 Mallikarjun -- AI & ML Engineer \| 3D Interactive Portfolio
+# 🚀 Mallikarjun \| AI & ML Engineer --- 3D Interactive Portfolio
 
 > **Building intelligent AI solutions and immersive web experiences.**
 
-A modern, high-performance 3D developer portfolio built with **React**,
-**Three.js**, **React Three Fiber**, **Spline**, **Framer Motion**, and
-**Tailwind CSS** to showcase my AI/ML projects, technical skills,
-certifications, and professional journey through an interactive WebGL
-experience.
+A modern **3D developer portfolio** crafted with **React, Three.js,
+React Three Fiber, Spline, Framer Motion, GSAP, and Tailwind CSS** to
+showcase my projects, technical skills, and professional journey through
+an immersive WebGL experience.
 
 ------------------------------------------------------------------------
 
-```{=html}
-<p align="center">
-```
-[![Live
-Demo](https://img.shields.io/badge/🌐_Live_Demo-mallugze.vercel.app-6366F1?style=for-the-badge)](https://mallugze.vercel.app)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-WebGL-000000?style=for-the-badge&logo=three.js&logoColor=white)
-![Tailwind
-CSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Framer
-Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Spline](https://img.shields.io/badge/Spline-3D-FF6B6B?style=for-the-badge)
-![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-```{=html}
+<p align="center">
+
+`<a href="https://mallugze.vercel.app">`{=html}`<img src="https://img.shields.io/badge/🌐_LIVE_DEMO-MALLUGZE.VERCEL.APP-6366F1?style=for-the-badge">`{=html}`</a>`{=html}
+`<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black">`{=html}
+`<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white">`{=html}
+`<img src="https://img.shields.io/badge/Three.js-WebGL-000000?style=for-the-badge&logo=three.js&logoColor=white">`{=html}
+`<img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white">`{=html}
+`<img src="https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white">`{=html}
+`<img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge">`{=html}
+`<img src="https://img.shields.io/badge/Spline-3D-FF6B6B?style=for-the-badge">`{=html}
+`<img src="https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white">`{=html}
+
+
 </p>
-```
+
+
+------------------------------------------------------------------------
+
 # 📸 Portfolio Preview
 
 ## 🏠 Hero Section
@@ -40,7 +40,7 @@ Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&lo
 
 ## ✨ Domain Animation
 
-![Domain](screenshots/domain_animation.png)
+![Domain Animation](screenshots/domain_animation.png)
 
 ## 📦 Featured Projects
 
@@ -52,30 +52,29 @@ Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&lo
 
 ------------------------------------------------------------------------
 
-# 💡 About the Portfolio
+# 💡 Why This Portfolio?
 
-This portfolio was designed to go beyond a traditional developer
-website. It combines modern frontend technologies with immersive 3D
-graphics to create an engaging experience while highlighting my work in
-Artificial Intelligence, Machine Learning, Full-Stack Development, and
-Data Science.
+Rather than creating a traditional static portfolio, I wanted to build
+an experience that reflects both my passion for **Artificial
+Intelligence** and **modern frontend engineering**.
 
-The primary goal was to build a portfolio that feels like an application
-rather than a static webpage while maintaining excellent responsiveness
-and performance.
+The result is a highly interactive WebGL-powered portfolio that blends
+smooth animations, immersive 3D visuals, and responsive design while
+maintaining excellent performance across devices.
 
 ------------------------------------------------------------------------
 
-# ✨ Key Features
+# ✨ Highlights
 
 -   🤖 Interactive 3D Spline Robot
--   🌌 React Three Fiber Skill Visualization
--   🎴 Interactive Project Showcase
--   ⚡ Smooth Framer Motion & GSAP Animations
+-   🌌 Animated React Three Fiber Skill Visualization
+-   🎴 Interactive Project Showcase Cards
+-   ⚡ Framer Motion & GSAP Animations
 -   📄 Animated Resume Download Button
 -   ✉️ Modern Contact Form
 -   🔗 Interactive Social Links
 -   📱 Fully Responsive Design
+-   🚀 Optimized Performance
 
 ------------------------------------------------------------------------
 
@@ -83,27 +82,40 @@ and performance.
 
 ``` mermaid
 flowchart TD
-User --> React
-React --> Components
-Components --> ThreeJS
-ThreeJS --> ReactThreeFiber
-Components --> FramerMotion
-Components --> TailwindCSS
-React --> Vercel
+A[Visitor] --> B[React + Vite]
+B --> C[Reusable Components]
+C --> D[Three.js]
+D --> E[React Three Fiber]
+C --> F[Spline]
+C --> G[Framer Motion + GSAP]
+B --> H[Tailwind CSS]
+B --> I[Vercel Deployment]
 ```
+
+------------------------------------------------------------------------
 
 # 🛠️ Tech Stack
 
 **Frontend:** React, Vite, JavaScript, HTML5, CSS3
 
-**3D Graphics:** Three.js, React Three Fiber, Drei, Spline
+**3D & WebGL:** Three.js, React Three Fiber, Drei, Spline
 
 **Animations:** Framer Motion, GSAP
 
-**Styling:** Tailwind CSS, Glassmorphism
+**Styling:** Tailwind CSS, Glassmorphism, CSS3
 
 **Deployment:** Vercel
 
+------------------------------------------------------------------------
+
+# ⚡ Performance
+
+-   Lazy-loaded assets
+-   Optimized WebGL rendering
+-   Responsive canvas scaling
+-   Smooth animations
+-   Fast Vite builds
+-   Mobile-first layout
 
 ------------------------------------------------------------------------
 
@@ -137,22 +149,10 @@ mallu_portfolio/
 │   └── contact.png
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Contact.jsx
-│   │   ├── SkillsTesseract.jsx
-│   │   ├── HollowPurpleIntro.jsx
-│   │   └── ui/
-│   │       ├── Pattern3DCard.jsx
-│   │       ├── SocialFlipButton.jsx
-│   │       ├── CreepyButton.jsx
-│   │       ├── glass-dock.tsx
-│   │       ├── splite.tsx
-│   │       └── interactive-3d-robot.tsx
+│   ├── assets/
 │   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
+│   ├── main.jsx
+│   └── index.css
 ├── package.json
 ├── vite.config.js
 └── README.md
@@ -160,15 +160,26 @@ mallu_portfolio/
 
 ------------------------------------------------------------------------
 
-# 🌐 Live Demo
+# 🚀 Future Roadmap
 
-**https://mallugze.vercel.app**
+-   🌙 Dark / Light Theme
+-   🤖 AI Assistant
+-   📝 Blog Section
+-   📊 Visitor Analytics
+-   🌍 Multi-language Support
+-   📁 More Featured Projects
+
+------------------------------------------------------------------------
+
+# 🌐 Live Website
+
+### https://mallugze.vercel.app
 
 ------------------------------------------------------------------------
 
 # 👨‍💻 Developed By
 
-## Mallikarjun
+**Mallikarjun**
 
 AI & Machine Learning Engineer
 
@@ -180,4 +191,9 @@ AI & Machine Learning Engineer
 
 ------------------------------------------------------------------------
 
-# ⭐ If you like this project, consider giving it a Star!
+::: {align="center"}
+### ⭐ If you like this project, consider giving it a Star!
+
+Built with ❤️ using **React**, **Three.js**, **React Three Fiber**,
+**Spline**, **Framer Motion**, and **Tailwind CSS**.
+:::
