@@ -169,6 +169,6 @@ AI & Machine Learning Engineer
 
 ------------------------------------------------------------------------
 
-::: {align="center"}
+
 ### ⭐ If you like this project, consider giving it a Star!
 
